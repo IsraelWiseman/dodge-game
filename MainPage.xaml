@@ -1,0 +1,35 @@
+﻿<Page
+    x:Class="Dodge_Game_2.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Dodge_Game_2"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="457*"/>
+            <RowDefinition Height="544*"/>
+        </Grid.RowDefinitions>
+        <Canvas x:Name = "myCanvas" Margin="0,0,0,30" Grid.RowSpan="2"  >
+        </Canvas>
+        <MediaPlayerElement x:Name="_mediaPlayerElement" AreTransportControlsEnabled="False"  Grid.Row="0" Grid.RowSpan="2" FontFamily="Showcard Gothic" Background="#FF1F1919" BorderBrush="{ThemeResource SystemChromeBlackLowColor}" Margin="0,2,0,-2"/>
+        <Button x:Name="btnStartGame" Content="Start Game" Width="288" Height="73" Click="btnStartGame_Click" Background="#FFF1E90C" FontWeight="Bold" FontSize="36" FontFamily="Showcard Gothic" Margin="1097,182,0,0" VerticalAlignment="Top">
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF5E5D19" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+        </Button>
+        <Image x:Name="startBackground" HorizontalAlignment="Left" Height="760" Margin="204,-17,0,0" VerticalAlignment="Top" Width="1283" Source="/pictures/start background.png" Grid.RowSpan="2"/>
+        <TextBlock x:Name="txtPause" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Enter = Pause" VerticalAlignment="Top" Height="37" Width="142" FontSize="20" FocusVisualPrimaryBrush="#FF43F022" FontWeight="Bold"/>
+        <TextBlock x:Name="txtResume" HorizontalAlignment="Left" Margin="11,42,0,0" TextWrapping="Wrap" Text="Shift = Resume" VerticalAlignment="Top" FontWeight="Bold" FontSize="20" Width="153" Height="37"/>
+        <Button x:Name="btnSaveGame" Content="Save Game" Margin="1373,8,0,0" VerticalAlignment="Top" Background="#3368E124" Height="43" Width="117" FontSize="18" Click="saveGame_Click"/>
+        <RadioButton x:Name="rbtnLoadGame" Content="Load Game" Margin="1097,0,0,251" Height="73" Width="288" FontSize="36" Checked="rbtnLoadGame_Checked" Background="#FFF1E90C" VerticalAlignment="Bottom" FontWeight="Bold" FontFamily="Showcard Gothic"/>
+
+
+    </Grid>
+
+</Page>
